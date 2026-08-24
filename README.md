@@ -36,13 +36,13 @@ Before running the project, make sure the following are installed:
 
 # 1. check tools available
 
-open terminal
-run php -v
-run mysql --version
+- open terminal
+- run `php -v`
+- run `mysql --version`
 
 # 2. create database
 
-run Get-Content database\*.sql | mysql -u root -p
+run `Get-Content database\*.sql | mysql -u root -p`
 
 # 3. configure database credentials
 
@@ -50,8 +50,8 @@ edit `config/database.php` and set your DB host/name/user/password directly
 
 # 4. run local server
 
-run php -S localhost:8000
-run mysql -u root -p
+- run `php -S localhost:8000`
+- run `mysql -u root -p`
 
 ---
 
