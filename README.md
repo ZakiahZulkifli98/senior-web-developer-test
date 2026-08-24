@@ -57,8 +57,8 @@ edit `config/database.php` and set your DB host/name/user/password directly
 
 Then open:
 
-http://localhost:8000/ → homepage
-http://localhost:8000/admin/dashboard.php → admin dashboard
-http://localhost:8000/test_database_connection.php → testing DB connection
+- http://localhost:8000/ → homepage
+- http://localhost:8000/admin/dashboard.php → admin dashboard
+- http://localhost:8000/test_database_connection.php → testing DB connection
 
 Why PDO? Prepared statements keep query text and input values separate, so it's safe from SQL injection — better than concatenating SQL strings, and standard enough for a practical test.
