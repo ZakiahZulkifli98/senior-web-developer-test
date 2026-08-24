@@ -1,0 +1,8 @@
+USE consent_site;
+
+CREATE TABLE IF NOT EXISTS admins (
+    id            INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username      VARCHAR(64)  NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
