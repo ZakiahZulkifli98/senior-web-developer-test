@@ -36,13 +36,13 @@ Before running the project, make sure the following are installed:
 
 # 1. check tools available
 
-open terminal
-run php -v
-run mysql --version
+- open terminal
+- run `php -v`
+- run `mysql --version`
 
 # 2. create database
 
-run Get-Content database\*.sql | mysql -u root -p
+run `Get-Content database\*.sql | mysql -u root -p`
 
 # 3. configure database credentials
 
@@ -50,15 +50,15 @@ edit `config/database.php` and set your DB host/name/user/password directly
 
 # 4. run local server
 
-run php -S localhost:8000
-run mysql -u root -p
+- run `php -S localhost:8000`
+- run `mysql -u root -p`
 
 ---
 
 Then open:
 
-http://localhost:8000/ → homepage
-http://localhost:8000/admin/dashboard.php → admin dashboard
-http://localhost:8000/test_database_connection.php → testing DB connection
+- http://localhost:8000/ → homepage
+- http://localhost:8000/admin/dashboard.php → admin dashboard
+- http://localhost:8000/test_database_connection.php → testing DB connection
 
 Why PDO? Prepared statements keep query text and input values separate, so it's safe from SQL injection — better than concatenating SQL strings, and standard enough for a practical test.
