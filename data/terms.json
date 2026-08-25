@@ -1,0 +1,33 @@
+{
+  "title": "Terms & Conditions",
+  "description": "By accessing or using this website, you agree to comply with these Terms & Conditions.",
+  "terms": [
+    {
+      "title": "Website Usage",
+      "description": "You agree to use this website only for lawful purposes and in a manner that does not interfere with the operation of the website."
+    },
+    {
+      "title": "Cookies and Consent",
+      "description": [
+        "This website uses cookies that are necessary for its operation, performance measurement and to provide a better user experience.",
+        "By continuing to access or use this website, you acknowledge and consent to the use of cookies in accordance with our Privacy Policy."
+      ]
+    },
+    {
+      "title": "Intellectual Property",
+      "description": "Unless otherwise stated, the content and materials available on this website are protected by applicable intellectual property laws."
+    },
+    {
+      "title": "Website Availability",
+      "description": "We do not guarantee that the website will always be available or free from errors or interruptions."
+    },
+    {
+      "title": "Changes to These Terms",
+      "description": "We reserve the right to update these Terms & Conditions when necessary. Any changes will be reflected on this page."
+    },
+    {
+      "title": "Contact Us",
+      "description": "If you have questions regarding these Terms & Conditions, please visit our Contact Us page."
+    }
+  ]
+}

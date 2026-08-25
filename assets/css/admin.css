@@ -13,11 +13,9 @@ body {
 
 .admin-login-page {
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
 }
 
@@ -28,11 +26,9 @@ body {
 
 .login-card {
   padding: 35px;
-
   background: #fff;
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -60,7 +56,6 @@ body {
 .form-group input {
   width: 100%;
   padding: 11px 12px;
-
   border: 1px solid #ccc;
   border-radius: 6px;
 }
@@ -68,22 +63,17 @@ body {
 .admin-button {
   width: 100%;
   padding: 12px;
-
   border: none;
   border-radius: 6px;
-
   background: #222;
   color: #fff;
-
   cursor: pointer;
 }
 
 .login-error {
   margin-bottom: 20px;
   padding: 12px;
-
   border-radius: 6px;
-
   background: #f8e8e8;
   color: #a00000;
 }
@@ -98,9 +88,7 @@ body {
 .admin-header-inner {
   width: min(100% - 40px, 1200px);
   min-height: 70px;
-
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,7 +116,6 @@ body {
 
 .page-heading {
   margin-bottom: 25px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,37 +133,33 @@ body {
 
 .record-count {
   padding: 8px 14px;
-
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
-
   white-space: nowrap;
 }
 
 /* Table */
 
 .table-wrapper {
-  overflow-x: auto;
-
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
+  width: 100%;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .consent-table {
   width: 100%;
   min-width: 650px;
-
   border-collapse: collapse;
 }
 
 .consent-table th,
 .consent-table td {
   padding: 14px 16px;
-
   text-align: left;
-
   border-bottom: 1px solid #eee;
 }
 
@@ -196,7 +179,6 @@ body {
 
 .empty-state {
   padding: 40px !important;
-
   text-align: center !important;
   color: #777;
 }
@@ -206,9 +188,7 @@ body {
 .admin-footer {
   margin-top: 30px;
   padding: 20px;
-
   text-align: center;
-
   font-size: 13px;
   color: #666;
 }

@@ -77,19 +77,19 @@ if ($action === 'accept') {
             INSERT INTO consents (
                 guid,
                 decided_at,
-                consent_version
+                version
             )
             VALUES (
                 :guid,
                 :decided_at,
-                :consent_version
+                :version
             )
         ");
 
         $stmt->execute([
             ':guid' => $guid,
             ':decided_at' => $consentDatetime,
-            ':consent_version' => $version
+            ':version' => $version
         ]);
     } catch (PDOException $e) {
         http_response_code(500);

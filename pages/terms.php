@@ -2,6 +2,11 @@
 
 $pageTitle = 'Terms & Conditions';
 
+$termData = json_decode(
+    file_get_contents(__DIR__ . '/../data/terms.json'),
+    true
+);
+
 require_once __DIR__ . '/../components/header.php';
 
 ?>
@@ -9,64 +14,31 @@ require_once __DIR__ . '/../components/header.php';
 <section class="page-section">
     <div class="container">
 
-        <h1>Terms & Conditions</h1>
+        <h1><?= htmlspecialchars($termData['title']) ?></h1>
 
         <p>
-            By accessing or using this website, you agree to comply
-            with these Terms & Conditions.
+            <?= htmlspecialchars($termData['description']) ?>
         </p>
 
-        <h2>1. Website Usage</h2>
+        <?php foreach ($termData['terms'] as $section): ?>
 
-        <p>
-            You agree to use this website only for lawful purposes
-            and in a manner that does not interfere with the operation
-            of the website.
-        </p>
+            <h2>
+                <?= htmlspecialchars($section['title']) ?>
+            </h2>
 
-        <h2>2. Cookies and Consent</h2>
+            <?php if (is_array($section['description'])): ?>
 
-        <p>
-            This website uses cookies that are necessary for its
-            operation, performance measurement and to provide a
-            better user experience.
-        </p>
+                <?php foreach ($section['description'] as $paragraph): ?>
+                    <p><?= htmlspecialchars($paragraph) ?></p>
+                <?php endforeach; ?>
 
-        <p>
-            By continuing to access or use this website, you
-            acknowledge and consent to the use of cookies in
-            accordance with our Privacy Policy.
-        </p>
+            <?php else: ?>
 
-        <h2>3. Intellectual Property</h2>
+                <p><?= htmlspecialchars($section['description']) ?></p>
 
-        <p>
-            Unless otherwise stated, the content and materials
-            available on this website are protected by applicable
-            intellectual property laws.
-        </p>
+            <?php endif; ?>
 
-        <h2>4. Website Availability</h2>
-
-        <p>
-            We do not guarantee that the website will always be
-            available or free from errors or interruptions.
-        </p>
-
-        <h2>5. Changes to These Terms</h2>
-
-        <p>
-            We reserve the right to update these Terms & Conditions
-            when necessary. Any changes will be reflected on this page.
-        </p>
-
-        <h2>6. Contact Us</h2>
-
-        <p>
-            If you have questions regarding these Terms & Conditions,
-            please visit our
-            <a href="/pages/about_us.php">Contact Us</a> page.
-        </p>
+        <?php endforeach; ?>
 
     </div>
 </section>

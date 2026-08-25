@@ -42,7 +42,6 @@ input {
   width: min(100% - 40px, 1100px);
   min-height: 72px;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +87,6 @@ main {
 .hero h1 {
   max-width: 700px;
   margin: 0 0 20px;
-
   font-size: clamp(36px, 6vw, 56px);
   line-height: 1.1;
 }
@@ -96,7 +94,6 @@ main {
 .hero p {
   max-width: 650px;
   margin: 0 0 30px;
-
   font-size: 18px;
   color: #555;
 }
@@ -104,13 +101,10 @@ main {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-
   background: #222;
   color: #fff;
-
   text-decoration: none;
   border-radius: 6px;
-
   transition: opacity 0.2s ease;
 }
 
@@ -139,7 +133,6 @@ main {
 
 .page-section h1 {
   margin: 0 0 30px;
-
   font-size: 40px;
   line-height: 1.2;
 }
@@ -147,7 +140,6 @@ main {
 .page-section h2 {
   margin-top: 40px;
   margin-bottom: 12px;
-
   font-size: 24px;
 }
 
@@ -159,9 +151,7 @@ main {
 .contact-info {
   margin-top: 25px;
   padding: 25px;
-
   max-width: 600px;
-
   background: #f7f7f7;
   border-radius: 8px;
 }
@@ -174,9 +164,7 @@ main {
 
 .site-footer {
   padding: 30px 20px;
-
   border-top: 1px solid #e5e5e5;
-
   text-align: center;
   color: #666;
 }
@@ -205,38 +193,31 @@ main {
 .consent-overlay {
   position: fixed;
   inset: 0;
-
   z-index: 9999;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
-
   padding: 20px;
-
   background: rgba(0, 0, 0, 0.55);
 }
 
 .consent-modal {
   width: min(100%, 700px);
-
+  position: relative;
+  z-index: 10000;
   padding: 30px;
-
   background: #fff;
   border-radius: 10px;
-
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .consent-modal h2 {
   margin: 0 0 15px;
-
   font-size: 24px;
 }
 
 .consent-modal p {
   margin: 0 0 15px;
-
   font-size: 14px;
   color: #444;
 }
@@ -271,31 +252,73 @@ main {
   color: #222;
 }
 
+/* Policy Modal */
+
+.policy-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.policy-modal {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.policy-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.policy-modal h2 {
+  margin-top: 0;
+  padding-right: 40px;
+  flex-shrink: 0;
+}
+
+.policy-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
 /* Header Menu */
 
 .menu-toggle {
   display: none;
   width: 40px;
   height: 40px;
-
   padding: 8px;
-
   border: none;
   background: transparent;
-
   cursor: pointer;
 }
 
 .menu-toggle span {
   display: block;
-
   width: 24px;
   height: 2px;
-
   margin: 5px auto;
-
   background: #222;
-
   transition: 0.2s ease;
 }
 
@@ -304,10 +327,8 @@ main {
 @media (max-width: 768px) {
   .navbar {
     position: relative;
-
     flex-direction: row;
     justify-content: space-between;
-
     min-height: 64px;
     padding: 12px 0;
   }
@@ -318,24 +339,17 @@ main {
 
   .nav-links {
     display: none;
-
     position: absolute;
-
     top: 100%;
     left: 0;
     right: 0;
-
     flex-direction: column;
     align-items: stretch;
-
     gap: 0;
-
     padding: 10px 20px;
-
     background: #fff;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-
     z-index: 100;
   }
 

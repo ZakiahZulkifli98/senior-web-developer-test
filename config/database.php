@@ -5,7 +5,7 @@ function get_db(): PDO
     $host = '127.0.0.1';
     $dbname = 'consent_site';
     $username = 'root';
-    $password = '';
+    $password = '123456';
 
     try {
         $pdo = new PDO(
@@ -19,6 +19,8 @@ function get_db(): PDO
 
         return $pdo;
     } catch (PDOException $e) {
-        die('Database connection failed.');
+        $_SESSION['login_error'] = 'Database connection failed.';
+        header('Location: /admin/login.php');
+        exit;
     }
 }
